@@ -119,7 +119,7 @@ export default function Dashboard() {
         {loading ? (
           <p>Loading dorms...</p>
         ) : currentDorms.length === 0 ? (
-          <p>No dorms found.</p>
+          <p>No kos found.</p>
         ) : (
           currentDorms.map((dorm) => (
             <Link to={`/kos/${dorm.id}`} key={dorm.id}>

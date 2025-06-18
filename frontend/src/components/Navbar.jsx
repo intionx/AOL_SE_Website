@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="nav-left">
-        <Link to="/dashboard">KosFinder</Link>
+        <Link to="/dashboard">KosInfo</Link>
       </div>
       <div className="nav-right">
         <Link to="/forum">Forum</Link>

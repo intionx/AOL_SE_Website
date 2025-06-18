@@ -27,6 +27,10 @@ export default function ForumDetail() {
   }, [id]);
 
   const handleReply = async () => {
+    if (!reply.trim()) {
+      setError("Please fill in your reply before submitting.");
+      return;
+    }
     try {
       const token = localStorage.getItem("auth_token");
       const response = await axios.post(
@@ -81,7 +85,7 @@ export default function ForumDetail() {
             <p>{post.body}</p>
           </div>
           <hr />
-
+          {error && <p style={{ color: "red", fontSize: "12px", marginBottom: "-10px" }}>{error}</p>}
           {isLoggedIn ? (
             <div className="reply-forum">
               <input
@@ -89,11 +93,18 @@ export default function ForumDetail() {
                 value={reply}
                 onChange={(e) => setReply(e.target.value)}
                 placeholder="What are your thoughts?"
+                required
               />
               <button onClick={handleReply}>Reply</button>
             </div>
           ) : (
-            <p style={{ textAlign: "center", fontStyle: "italic", marginBottom: "10px" }}>
+            <p
+              style={{
+                textAlign: "center",
+                fontStyle: "italic",
+                marginBottom: "10px",
+              }}
+            >
               Please{" "}
               <span
                 style={{ color: "#007BFF", cursor: "pointer" }}

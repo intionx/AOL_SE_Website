@@ -91,7 +91,7 @@ export default function Forum() {
               >
                 log in
               </span>{" "}
-              create a post.
+              to create a post.
             </p>
           )}
 
