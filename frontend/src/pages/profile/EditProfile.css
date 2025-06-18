@@ -1,0 +1,151 @@
+.edit-profile-page {
+  background: #007BFF;
+  min-height: 100vh;
+  font-family: 'Poppins';
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4vh 2vw;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.editing-profile {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 960px;
+  width: 100%;
+  gap: 1rem;
+}
+
+
+
+.profile-container-edit {
+  flex: 1;
+  background-color: #0063ce;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+}
+
+.profile-container-edit h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-container-edit p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.profile-container-edit img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  margin: 1.5rem 0;
+}
+
+.edit-form {
+  flex: 1;
+  padding: 3rem 2rem;
+  background-color: white;
+}
+
+.edit-form h1 {
+  font-size: 1.8rem;
+  color: #007BFF;
+  margin-bottom: 2rem;
+}
+
+.edit-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.edit-form input {
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+}
+
+.edit-form input[type="name"],
+.edit-form input[type="text"],
+.edit-form input[type="email"],
+.edit-form input[type="password"],
+.edit-form input[type="file"] {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.edit-form input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.edit-form .change-password {
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.edit-form .change-password a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.edit-form .change-password a:hover {
+  text-decoration: underline;
+}
+
+.edit-form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: #007BFF 0 10px 20px -10px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-form button:hover {
+  background-color: #0056b3;
+}
+
+.back-button-edit-profile {
+  position: relative;
+  margin-top: 30px;
+}
+
+.back-button-edit-profile button {
+  width: auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: white;
+  border: none;
+  color: #007BFF;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(197, 199, 202, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.back-button-edit-profile button:hover {
+  background-color: #cccccd;
+}

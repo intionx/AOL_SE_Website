@@ -1,0 +1,304 @@
+
+.dorm-body {
+  font-family: 'Poppins';
+  margin-top: 20px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.dorm-title h1{
+  margin-top: 2vh;
+  font-weight: 600;
+  font-size: 40px !important;
+}
+
+.dorm-title h2{
+  margin-top: 1vh;
+  font-weight: 200;
+  color: #e8da1a;
+}
+
+
+.dorm-title h3 {
+  margin-top: -6px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.back-button-dashboard {
+  position: relative;
+  margin-left: 50px;
+  margin-top: 20px;
+  z-index: 1000;
+}
+
+.back-button-dashboard button {
+  width: auto;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.back-button-dashboard button:hover {
+  background-color: #0056b3;
+}
+
+/* Container */
+.dorm-detail {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5vh 5vw;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.reviews-below-gallery {
+  margin-top: 4rem;
+}
+
+.review-title{
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* Left: Title + Gallery */
+.dorm-title {
+  flex: 1;
+  min-width: 320px;
+  max-width: 50%;
+}
+
+.dorm-title h1 {
+  font-size: 2.5vw;
+  margin-top: 0;
+  margin-bottom: 1vh;
+}
+
+/* Flickity gallery */
+.gallery {
+  margin-top: 1vh;
+  width: 100%;
+}
+
+.gallery-cell img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Vertical Divider */
+.page-split {
+  border-left: 2px solid #000000;
+  height: auto;
+  width: 2px;
+  margin-left: 2vw;
+  margin-right: 0;
+  align-self: stretch;
+}
+
+/* Right: Dorm Info */
+.dorm-info {
+  flex: 1;
+  min-width: 320px;
+  max-width: 45%;
+  font-size: 1rem;
+}
+
+.dorm-info p{
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.dorm-info ul {
+  padding-left: 3rem;
+  margin: 0.5rem 0 1rem 0;
+  margin-top: -10px;
+}
+
+.dorm-info li {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Pricing */
+.dorm-info h1 {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Contact Buttons */
+.whatsapp,
+.send-message,
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 1vh;
+  padding: 0;
+  font-weight: 600;
+  gap: 1rem;
+  width: 100%;
+}
+
+.whatsapp {
+  background-color: #25d366;
+  color: white;
+  margin-top: 10px;
+}
+
+.send-message {
+  background-color: #007bf0;
+  color: white;
+}
+
+.share {
+  background-color: white;
+  color: #007bf0;
+  border: 2px solid #007bf0;
+}
+
+.whatsapp:hover,
+.send-message:hover,
+.share:hover {
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+
+
+.send-message img,
+.share img {
+  height: 4vh;
+  width: 4vh;
+}
+
+.whatsapp img{
+    width: 6vh;
+}
+
+/* Reviews Section */
+.review-section {
+  margin-top: 2 rem;
+}
+
+.review-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+.review-user {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.review-rating {
+  color: #f39c12;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.review-comment {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.no-review {
+  font-style: italic;
+  color: #888;
+}
+
+/* Review Form */
+.review-form {
+  margin-top: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+
+.review-form h3 {
+  margin-bottom: 1rem;
+}
+
+.review-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-family: inherit;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  outline: none;
+  border: 2px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.review-form button {
+  background-color: #007bf0;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.review-form button:hover {
+  background-color: #005bb5;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+  margin: 1rem 0;
+}
+
+/* Responsive Touch */
+@media screen and (max-width: 768px) {
+  .dorm-detail {
+    flex-direction: column;
+  }
+
+  .dorm-title,
+  .dorm-info {
+    max-width: 100%;
+  }
+
+  .dorm-title h1 {
+    font-size: 6vw;
+  }
+
+  .whatsapp,
+  .send-message,
+  .share {
+    width: 100%;
+  }
+}
