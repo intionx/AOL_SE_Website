@@ -38,8 +38,6 @@ export default function SubmitKos() {
 
   return (
     <>
-      {/* <Navbar /> */}
-
       <div className="submission-body">
         <div className="submit-dorm-container">
           <div className="submit-dorm-card">
