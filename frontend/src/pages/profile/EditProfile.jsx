@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./EditProfile.css";
 import { useNavigate } from "react-router";
-import userIcon from '../../assets/userIcon.png'
+import userIcon from "../../assets/userIcon.png";
 
 export default function EditProfile() {
   const [formData, setFormData] = useState({
@@ -15,6 +15,7 @@ export default function EditProfile() {
 
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const userData = JSON.parse(localStorage.getItem("user"));
@@ -39,6 +40,18 @@ export default function EditProfile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { password } = formData;
+
+    const hasUppercase = /[A-Z]/.test(password);
+    const isLongEnough = password.length >= 8;
+
+    if (!hasUppercase || !isLongEnough) {
+      setError(
+        "Password must be at least 8 characters long and contain at least one uppercase letter."
+      );
+      return;
+    }
+
     const token = localStorage.getItem("auth_token");
     const data = new FormData();
     data.append("name", formData.name);
@@ -67,7 +80,8 @@ export default function EditProfile() {
       window.location.reload();
     } catch (err) {
       console.error(err);
-      alert("Failed to update profile");
+      const msg = err.response?.data?.message || "Registration Failed";
+      setError(msg);
     }
   };
 
@@ -75,7 +89,6 @@ export default function EditProfile() {
     <>
       <div className="edit-profile-page">
         <div className="editing-profile">
-          
           <div className="profile-container-edit">
             <h1>Your Previous Profile</h1>
             <img
@@ -90,8 +103,8 @@ export default function EditProfile() {
             <p>Email: {user?.email}</p>
 
             <div className="back-button-edit-profile">
-            <button onClick={() => navigate(-1)}>← Back</button>
-          </div>
+              <button onClick={() => navigate(-1)}>← Back</button>
+            </div>
           </div>
 
           <div className="edit-form">
@@ -116,7 +129,9 @@ export default function EditProfile() {
                 onChange={handleChange}
                 required
               />
-
+              {error && (
+                <p style={{ color: "red", fontSize: "12px" }}>{error}</p>
+              )}
               <label htmlFor="password">Change your Password:</label>
               <input
                 id="password"
