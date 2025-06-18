@@ -62,6 +62,7 @@ export default function KosDetail() {
       setReviews((prev) => [...prev, response.data]);
       setRating(5);
       setComment("");
+      setError("");
     } catch (err) {
       console.error(err);
     }

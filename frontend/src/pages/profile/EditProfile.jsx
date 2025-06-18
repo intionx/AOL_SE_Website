@@ -40,23 +40,23 @@ export default function EditProfile() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { password } = formData;
-
-    const hasUppercase = /[A-Z]/.test(password);
-    const isLongEnough = password.length >= 8;
-
-    if (!hasUppercase || !isLongEnough) {
-      setError(
-        "Password must be at least 8 characters long and contain at least one uppercase letter."
-      );
-      return;
-    }
-
+    setError("");
     const token = localStorage.getItem("auth_token");
     const data = new FormData();
     data.append("name", formData.name);
     data.append("email", formData.email);
     if (formData.password) {
+      const { password } = formData;
+
+      const hasUppercase = /[A-Z]/.test(password);
+      const isLongEnough = password.length >= 8;
+
+      if (!hasUppercase || !isLongEnough) {
+        setError(
+          "Password must be at least 8 characters long and contain at least one uppercase letter."
+        );
+        return;
+      }
       data.append("password", formData.password);
       data.append("password_confirmation", formData.confirmPassword);
     }

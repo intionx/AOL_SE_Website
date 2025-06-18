@@ -58,7 +58,7 @@ export default function Forum() {
       <Navbar />
       <div className="forum-body">
         <div className="forum">
-          <h1>KosFinder Forum</h1>
+          <h1>KosInfo Forum</h1>
 
           {isLoggedIn ? (
             <div className="add-new-forum">

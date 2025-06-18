@@ -46,6 +46,7 @@ export default function ForumDetail() {
       );
       setReplies((prev) => [...prev, response.data]);
       setReply("");
+      setError("");
     } catch (err) {
       console.error(err);
       alert("Reply Failed :", error);
